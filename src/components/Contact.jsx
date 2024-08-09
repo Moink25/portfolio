@@ -13,7 +13,7 @@ const Contact = () => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "a58d29d8-823b-4236-b34d-e319838398dd");
+    formData.append("access_key", process.env.REACT_APP_WEB3FORMS_API_KEY);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <div className="w-full px-4 mt-10" id="contact">
       <h1 className="pb-6 md:text-5xl sm:text-4xl text-3xl font-semibold ml-4">
-      ✉ Contact Me
+        ✉ Contact Me
       </h1>
       <form
         className="bg-white shadow-md shadow-gray-400 p-6 md:px-20 rounded-md"
