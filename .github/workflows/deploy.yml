@@ -31,3 +31,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
+        # Optional: Specify branch and custom domain if necessary
+        # publish_branch: gh-pages
+        # cname: your.custom.domain
